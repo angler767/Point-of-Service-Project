@@ -32,6 +32,7 @@ public:
 	Food *ordered_Items[200];
 
 	Order() {
+		final_Price = 0;
 		double sum = 0;
 		for (int i = 0; i < 200; i++) {
 			ordered_Items[i]->item_Number = 0;
@@ -111,7 +112,7 @@ Food* food_Done(Food *ordered_Items[200], Food *completed_Food) {
 }
 
 double calculate_Price(double initial_Price, double tax_Percentage, double tip_Percentage){
-	double final_Price = initial_Price*(1+tax_Percentage/100)*(1+tip_Percentage/100)
+	double final_Price = initial_Price*(1+tax_Percentage/100)*(1+tip_Percentage/100);
 
 	return final_Price;
 
